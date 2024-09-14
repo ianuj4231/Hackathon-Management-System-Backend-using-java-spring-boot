@@ -63,7 +63,7 @@ public class UserController {
     @GetMapping("logout")
     public String endSession(HttpSession session) {
     	if (session != null) {
-            session.invalidate(); // Invalidate the session
+            session.invalidate();
         }
 
         return "Logged Out Successful";
