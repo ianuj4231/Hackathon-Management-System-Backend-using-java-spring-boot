@@ -59,13 +59,5 @@ public class UserController {
     public User getUser(HttpSession session) {
     	return userService.getUser(session);
     }
-
-    @GetMapping("logout")
-    public String endSession(HttpSession session) {
-    	if (session != null) {
-            session.invalidate();
-        }
-
-        return "Logged Out Successful";
-    }
+	
 }
