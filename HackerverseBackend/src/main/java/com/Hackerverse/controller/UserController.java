@@ -30,7 +30,7 @@ public class UserController {
     public String createUser(@RequestBody User u) {
     	u.setRole("Leader");
 		return userService.createUser(u);
-	}
+   }
     
     @PostMapping("login")
     public String login(@RequestBody User u, HttpSession session) {
@@ -59,7 +59,7 @@ public class UserController {
     public User getUser(HttpSession session) {
     	return userService.getUser(session);
     }
-    
+
     @GetMapping("logout")
     public String endSession(HttpSession session) {
     	if (session != null) {
